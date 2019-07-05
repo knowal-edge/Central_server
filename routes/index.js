@@ -4,7 +4,8 @@ var mqttService = require('../src/services/mqttServices');
 var websocket = require('../src/services/websocketService');
 
 
-websocket.SocketClient();
+//websocket.SocketClient();
+mqttService.mqttSubscriber();
 /* GET home page. */
 router.get('/websocket/client', function(req, res, next) {
  
@@ -14,7 +15,7 @@ router.get('/websocket/client', function(req, res, next) {
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
   //mqttService.mqttPublisher("100");
-  mqttService.mqttSubscriber();
+
 
 });
 

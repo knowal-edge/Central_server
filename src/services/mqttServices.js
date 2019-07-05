@@ -12,31 +12,7 @@ var seTopic=process.env.SERVERTOPIC;
 
 
 module.exports = {
-     /*******************************MQTT PUBLISHER METHOD********************************************/
-
-     mqttPublisher:function(msg1){
-
-        client.on("connect",function(){	
-            console.log("connected  "+ client.connected);
-        })
-
-        //handle errors
-        client.on("error",function(error){
-            console.log("Can't connect" + error);
-            process.exit(1)
-        });
-
-
-        if (client.connected == true){
-	
-            client.publish(seTopic,msg1,options);
-            
-            }
-            
-    },
-
-    /*******************************END********************************** */
-
+    
     /*******************************MQTT SUBSCRIPTION METHOD********************************************/
 
     mqttSubscriber:function(){
