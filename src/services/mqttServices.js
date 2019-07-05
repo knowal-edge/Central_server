@@ -8,7 +8,6 @@ var options={
 
 var client  = mqtt.connect(process.env.MQTTURL);
 var edTopic=process.env.EDGETOPIC;
-var seTopic=process.env.SERVERTOPIC;
 
 
 module.exports = {
